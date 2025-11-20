@@ -1015,15 +1015,47 @@ footer {
     .nav-links {
         gap: 0;
         width: 100%;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .nav-links a {
-        padding: 1rem 1.2rem;
-        font-size: 0.65rem;
-        letter-spacing: 0.5px;
+        padding: 0.8rem 0.5rem;
+        font-size: 0;
+        letter-spacing: 0;
         white-space: nowrap;
         flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links a::before {
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .nav-links a[href="#home"]::before {
+        content: '🏠';
+    }
+
+    .nav-links a[href="#services"]::before {
+        content: '🎾';
+    }
+
+    .nav-links a[href="#promos"]::before {
+        content: '🎁';
+    }
+
+    .nav-links a[href="#about"]::before {
+        content: '👥';
+    }
+
+    .nav-links a[href="#gallery"]::before {
+        content: '📸';
+    }
+
+    .nav-links a[href="#contact"]::before {
+        content: '📧';
     }
 
     .hero-title {
@@ -1137,6 +1169,8 @@ footer {
 
     .contact-link {
         font-size: 1rem;
+        word-break: break-all;
+        overflow-wrap: break-word;
     }
 
     nav {
